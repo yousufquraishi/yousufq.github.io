@@ -47,7 +47,17 @@
             width: 90%;
             max-width: 600px;
             text-align: center;
-            padding: 40px 0;
+            padding: 30px 0 40px 0;
+        }
+
+        /* The Bismillah Text */
+        .bismillah {
+            font-size: 0.95rem;
+            color: var(--gold-accent);
+            font-style: italic;
+            margin-bottom: 25px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
         }
 
         h1 {
@@ -181,15 +191,29 @@
             color: #999;
             letter-spacing: 2px;
             text-transform: uppercase;
+            text-align: center;
+            line-height: 1.8;
+        }
+
+        /* New footer styling for the appetizers note */
+        .footer-time {
+            color: var(--gold-accent);
+            font-style: italic;
+            text-transform: none;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            display: block;
+            margin-top: 5px;
         }
     </style>
 </head>
 <body>
 
-    <!-- Put your wide 'banner.jpg' image in the same GitHub repository folder -->
     <img src="banner.jpg" alt="Walima Banner" class="header-image" onerror="this.style.display='none'">
 
     <div class="container">
+        <div class="bismillah">In the name of Allah, The Most Beneficent, The Most Merciful</div>
+        
         <h1>Yousuf & Nafeesa's</h1>
         <h2>Walima</h2>
         
@@ -201,7 +225,8 @@
     </div>
 
     <div class="footer">
-        JUNE 27, 2026 • ROYAL PALM BANQUET
+        JUNE 27, 2026 • ROYAL PALM BANQUET<br>
+        <span class="footer-time">Appetizers Begin at 6:00 PM</span>
     </div>
 
     <script>
