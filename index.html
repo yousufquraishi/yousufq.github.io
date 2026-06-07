@@ -43,22 +43,33 @@
             transition: background-color 0.5s ease, color 0.5s ease;
         }
 
-        /* Theme Toggle Button */
+        /* Floating Theme Toggle Button */
         .theme-toggle {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--card-bg);
+            border: 2px solid var(--gold-accent);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            border-radius: 50%;
+            width: 55px;
+            height: 55px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.6rem;
             cursor: pointer;
-            z-index: 100;
-            transition: transform 0.3s ease;
-            padding: 10px;
+            z-index: 1000;
+            transition: all 0.3s ease;
         }
 
         .theme-toggle:hover {
-            transform: scale(1.1);
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        body.dark-mode .theme-toggle {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
         }
 
         @keyframes pageLoad {
@@ -252,10 +263,6 @@
 </head>
 <body>
 
-    <!-- Evening Mode Toggle Button -->
-    <button id="darkModeToggle" class="theme-toggle" aria-label="Toggle Evening Mode">🌙</button>
-
-    <!-- Put your wide 'banner.jpg' image in the same GitHub repository folder -->
     <img src="banner.jpg" alt="Walima Banner" class="header-image" onerror="this.style.display='none'">
 
     <div class="container">
@@ -275,6 +282,8 @@
         JUNE 27, 2026 • ROYAL PALM BANQUET<br>
         <span class="footer-time">Appetizers Begin at 6:00 PM</span>
     </div>
+
+    <button id="darkModeToggle" class="theme-toggle" aria-label="Toggle Evening Mode">🌙</button>
 
     <script>
         // Exact 145-person guest list
