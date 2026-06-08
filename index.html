@@ -4,13 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
-    <meta property="og:title" content="Yousuf & Nafeesa's Walima - Find Your Seat">
-    <meta property="og:description" content="Your seat awaits. Enter your name to find your table for the evening.">
-    <meta property="og:image" content="https://yousufquraishi.github.io/banner-dark.jpg">
-    <meta property="og:url" content="https://yousufquraishi.github.io/">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-
     <link rel="preload" href="banner-dark.jpg" as="image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -84,11 +77,13 @@
             transition: filter 0.8s ease;
         }
 
+        /* 📍 GPU-ACCELERATED BUG-FREE GOLDEN WIPE */
         #golden-wipe {
-            position: fixed; bottom: 0; left: 0; width: 100vw; height: 0;
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
             background: linear-gradient(135deg, #D4AF37, #AA8529);
-            z-index: 9000; transition: height 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-            pointer-events: none;
+            z-index: 9000; pointer-events: none;
+            transform: translateY(100%);
+            /* Transition is applied dynamically in JS */
         }
 
         #splash-screen {
@@ -354,11 +349,97 @@
         <div id="schedule-tab" class="tab-content">
             <h2>Evening Itinerary</h2>
             <div class="timeline">
-                <div class="timeline-item" data-time="18:00" data-end="19:00"><div class="timeline-node"></div><div class="timeline-content"><div class="timeline-time">6:00 PM</div><div class="timeline-title">Appetizers & Mingling</div><p class="timeline-desc">Welcome drinks, fresh hors d'oeuvres, and find your designated seating arrangement.</p></div></div>
-                <div class="timeline-item" data-time="19:00" data-end="19:30"><div class="timeline-node"></div><div class="timeline-content"><div class="timeline-time">7:00 PM</div><div class="timeline-title">Grand Couple Entrance</div><p class="timeline-desc">Welcoming the newlyweds, Yousuf & Nafeesa, to the reception hall.</p></div></div>
-                <div class="timeline-item" data-time="19:30" data-end="20:00"><div class="timeline-node"></div><div class="timeline-content"><div class="timeline-time">7:30 PM</div><div class="timeline-title">Speeches & Blessings</div><p class="timeline-desc">A few words from honored family and close friends.</p></div></div>
-                <div class="timeline-item" data-time="20:00" data-end="21:30"><div class="timeline-node"></div><div class="timeline-content"><div class="timeline-time">8:00 PM</div><div class="timeline-title">Formal Dinner Service</div><p class="timeline-desc">A gourmet multi-course dinner is served directly to your tables.</p></div></div>
-                <div class="timeline-item" data-time="21:30" data-end="23:59"><div class="timeline-node"></div><div class="timeline-content"><div class="timeline-time">9:30 PM</div><div class="timeline-title">Cake Cutting & Dancing</div><p class="timeline-desc">Sweet celebration dessert, coffee service, and celebration dance floor open.</p></div></div>
+                
+                <div class="timeline-item" data-time="18:00" data-end="18:30">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-time">6:00 PM</div>
+                        <div class="timeline-title">Appetizers & Mingling</div>
+                        <p class="timeline-desc">Doors open for welcome drinks and fresh hors d'oeuvres.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-time="18:30" data-end="18:45">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-time">6:30 PM</div>
+                        <div class="timeline-title">Grand Entrances</div>
+                        <p class="timeline-desc">Welcoming the newlyweds, Yousuf & Nafeesa, to the reception hall.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-time="18:45" data-end="19:00">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-time">6:45 PM</div>
+                        <div class="timeline-title">Opening Recitation & 1st Speeches</div>
+                        <p class="timeline-desc">A beautiful opening recitation followed by the first group of speeches.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-time="19:00" data-end="19:45">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-time">7:00 PM</div>
+                        <div class="timeline-title">Formal Dinner Service</div>
+                        <p class="timeline-desc">A gourmet multi-course dinner is served directly to your tables.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-time="19:45" data-end="20:00">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-time">7:45 PM</div>
+                        <div class="timeline-title">2nd Batch Speeches</div>
+                        <p class="timeline-desc">A few more words from honored family and close friends.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-time="20:00" data-end="20:15">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-time">8:00 PM</div>
+                        <div class="timeline-title">The Shoe Game</div>
+                        <p class="timeline-desc">A fun interactive game to test how well the couple knows each other.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-time="20:15" data-end="20:35">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-time">8:15 PM</div>
+                        <div class="timeline-title">Dessert Service</div>
+                        <p class="timeline-desc">Enjoy a sweet selection of desserts.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-time="20:35" data-end="20:50">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-time">8:35 PM</div>
+                        <div class="timeline-title">3rd Batch Speeches</div>
+                        <p class="timeline-desc">Final heartfelt messages and blessings.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-time="20:50" data-end="21:00">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-time">8:50 PM</div>
+                        <div class="timeline-title">Cake Cutting</div>
+                        <p class="timeline-desc">The newlyweds cut the wedding cake.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-time="21:00" data-end="23:59">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-time">9:00 PM</div>
+                        <div class="timeline-title">Dance Floor Open</div>
+                        <p class="timeline-desc">Join the couple on the dance floor to celebrate the rest of the night!</p>
+                    </div>
+                </div>
+
             </div>
         </div>
 
@@ -637,10 +718,14 @@
             el.style.setProperty('--bevel-x', `0px`); el.style.setProperty('--bevel-y', `1px`);
         }
 
+        // 📍 GPU ACCELERATED WIPE ANIMATION
         function initiateGoldenReveal(name, targetTable, isTentative) {
             triggerHaptic();
             const wipe = document.getElementById('golden-wipe');
-            wipe.style.top = 'auto'; wipe.style.bottom = '0'; wipe.style.height = '100vh';
+            
+            // Enable transition and sweep up
+            wipe.style.transition = 'transform 0.5s cubic-bezier(0.77, 0, 0.175, 1)';
+            wipe.style.transform = 'translateY(0)';
             
             setTimeout(() => {
                 document.getElementById('search-interface').style.display = 'none';
@@ -650,7 +735,9 @@
                 document.getElementById('tablemates-list').style.display = 'none';
                 
                 currentActiveGuest = name; currentActiveTable = targetTable;
-                wipe.style.bottom = 'auto'; wipe.style.top = '0'; wipe.style.height = '0';
+                
+                // Sweep away (slide up off screen)
+                wipe.style.transform = 'translateY(-100%)';
                 
                 startCelebrationAnimation();
                 
@@ -661,6 +748,13 @@
                     if (current >= targetTable) { odometer.innerText = targetTable; clearInterval(counter); }
                     else { odometer.innerText = current; }
                 }, intervalTime);
+
+                // Secretly reset the wipe back to the bottom after it finishes leaving
+                setTimeout(() => {
+                    wipe.style.transition = 'none';
+                    wipe.style.transform = 'translateY(100%)';
+                }, 500);
+
             }, 500);
         }
 
